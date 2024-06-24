@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class}) //Error on serve, AutoCongfig added to correct
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class}) //Error on serve, AutoCongfig added to correct error (used google to help)
 @SpringBootApplication
 public class ApprenticeProjectApplication {
 

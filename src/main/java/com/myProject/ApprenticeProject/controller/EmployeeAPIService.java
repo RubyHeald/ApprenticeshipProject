@@ -11,6 +11,7 @@ public class EmployeeAPIService {
     //Object for employee
     Employee employee; //object
 
+    //POST TESTED IN POSTMAN with Employee objects passed to get an employee - passed
     @GetMapping("{employeeId}") //Mapping to get EmployeeID
     public Employee getEmployeeDetails (String employeeId){
         return employee;
