@@ -12,17 +12,11 @@ public class EmployeeAPIService {
     Employee employee; //object
 
     //POST TESTED IN POSTMAN with Employee objects passed to get an employee - passed
-    @GetMapping("{employeeId}") //Mapping to get EmployeeID
+    @GetMapping("/{employeeId}")
+// Mapping to get EmployeeID
     public Employee getEmployeeDetails (String employeeId){
         return employee;
     }
-        //hard coded employee details to test
-//        return new Employee(
-//                "Ruby Heald",
-//                1,
-//                "rubyheald",
-//                00000);
-//    }
 
     //POST TESTED IN POSTMAN with Employee objects passed to create a new employee - passed
     @PostMapping
@@ -36,15 +30,15 @@ public class EmployeeAPIService {
     @PutMapping
     public String putEmployeeDetails(@RequestBody Employee employee){//create employee to accept the Employee object
         this.employee = employee;
-        return "Employee updated succesfully";
+        return "Employee updated successfully";
     }
 
     //DELETE TESTED IN POSTMAN with deleting employee 2 - passed
     //Delete mapping specifically set to EmployeeID
-    @DeleteMapping("{employeeId}")
+    @DeleteMapping("/{employeeId}")
     public String deleteEmployeeDetails(String employeeId){
         this.employee = null;
-        return "Employee deteled sucessfully";
+        return "Employee deleted successfully";
     }
 
 }
